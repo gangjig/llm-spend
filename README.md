@@ -8,7 +8,7 @@ it never turns those numbers into dollars. This plugin adds one command
 that does:
 
 ```bash
-llm install llm-spend
+llm install llm-spend-report
 llm spend
 ```
 

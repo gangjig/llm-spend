@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "llm-spend"
+name = "llm-spend-report"
 version = "0.1.0"
 description = "An llm CLI plugin that prices your logged usage: `llm spend` reports estimated cost by model or by day from logs.db"
 readme = "README.md"
