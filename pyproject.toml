@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-spend"
+version = "0.1.0"
+description = "An llm CLI plugin that prices your logged usage: `llm spend` reports estimated cost by model or by day from logs.db"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Gang Ji" },
+]
+keywords = ["llm", "cli", "cost", "usage", "llm-plugin"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "llm",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[project.entry-points."llm"]
+llm_spend = "llm_spend"
+
+[project.urls]
+Homepage = "https://github.com/gangjig/llm-spend"
+Repository = "https://github.com/gangjig/llm-spend"
+
+[tool.setuptools]
+py-modules = ["llm_spend"]
