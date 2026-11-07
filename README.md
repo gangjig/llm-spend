@@ -90,6 +90,25 @@ python -m pytest        # 11 tests, fully offline
 Requires Python ≥ 3.10 and `llm` itself. Zero additional runtime
 dependencies.
 
+## Build your own
+
+This repository is small enough to regenerate from a prompt. Paste the
+following into an LLM and it should produce a closely similar project:
+
+> Write a plugin for Simon Willison's llm command-line tool that turns
+> the token usage already sitting in llm's local SQLite log database
+> into dollars, adding a single spend command that reports estimated
+> cost grouped by model, by day, or over a chosen period, as a readable
+> table or as JSON. The plugin opens the database read-only, reads both
+> of llm's storage layouts (current and legacy) and merges them, prices
+> cached tokens at the cached rate when the provider recorded them, and
+> resolves model aliases to the model that actually ran. Models with no
+> known price are never silently counted as free: they are listed with
+> their token counts, a dash for cost, and a note, while calls that
+> logged no usage are counted and excluded. A bundled price table covers
+> common models and can be overridden or extended with the user's own
+> prices file.
+
 ## License
 
 MIT — see [LICENSE](LICENSE). Copyright (c) 2026 Gang Ji.
